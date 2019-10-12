@@ -1,17 +1,16 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyScript : MonoBehaviour
-{
+public class FireballMonsterBabyController : MonoBehaviour {
 
+    private RoomController roomController;
+    public GameObject coin;
     public float moveSpeed;
-    public float MinDist = 5f;
-    public float MaxDist = 10f;
 
     private Animator anim;
     private Rigidbody2D myRigidbody;
-    public GameObject PlayerFeet;
 
     private bool moving;
 
@@ -25,7 +24,8 @@ public class EnemyScript : MonoBehaviour
     private Vector3 moveDirection;
 
     public float waitToReload;
-    private PlayerMovement player;
+    private bool reloading;
+    private PlayerController player;
     public bool detecterJoueur;
 
     // Use this for initialization
@@ -33,7 +33,8 @@ public class EnemyScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        player = FindObjectOfType<PlayerMovement>();
+        player = FindObjectOfType<PlayerController>();
+        roomController = FindObjectOfType<RoomController>();
 
         //timeBetweenMoveCounter = timeBetweenMove;
         //timeToMoveCounter = timeToMove;
@@ -67,7 +68,7 @@ public class EnemyScript : MonoBehaviour
                 //timeToMoveCounter = timeToMove;
                 timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
 
-                if (Vector3.Distance(player.transform.position, transform.position) < 10f && detecterJoueur)
+                if (Vector3.Distance(player.transform.position, transform.position) < 5f && detecterJoueur)
                 {
                     timeBetweenMove = 0.5f;
                     moveDirection = player.transform.position - transform.position;
@@ -78,39 +79,47 @@ public class EnemyScript : MonoBehaviour
                     moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed, 0f);
                 }
 
-                /*if (moveDirection.x <= 0f)
+                if (moveDirection.x <= 0f)
                 {
                     anim.SetFloat("moveX", -1f);
                 }
                 else
                 {
                     anim.SetFloat("moveX", 1f);
-                }*/
+                }
             }
         }
-        if (Vector2.Distance(transform.position, player.gameObject.transform.position) >= MinDist)
+
+        if (reloading)
         {
-            detecterJoueur = true;
-            Debug.Log("Joueur Détecté");
+            waitToReload -= Time.deltaTime;
+            if (waitToReload < 0f)
+            {
+                SceneManager.LoadScene("Main");
+                player.Revive();
+            }
         }
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "PlayerController")
+        if (other.gameObject.name == "Player")
         {
-            Debug.Log("Player dead");
+            player.Die();
+            reloading = true;
         }
     }
 
     public void Die()
     {
-        Debug.Log("Enemy dead");
+        Instantiate(coin, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        Destroy(gameObject);
+        roomController.EnemyDead();
     }
 
     public void WakeUp()
     {
         detecterJoueur = true;
     }
-
 }
+*/

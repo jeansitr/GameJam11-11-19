@@ -1,17 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyScript : MonoBehaviour
-{
+public class FireballMonsterController : MonoBehaviour {
 
     public float moveSpeed;
-    public float MinDist = 5f;
-    public float MaxDist = 10f;
 
     private Animator anim;
     private Rigidbody2D myRigidbody;
-    public GameObject PlayerFeet;
+    public GameObject baby;
 
     private bool moving;
 
@@ -25,12 +23,12 @@ public class EnemyScript : MonoBehaviour
     private Vector3 moveDirection;
 
     public float waitToReload;
+    private bool reloading;
     private PlayerMovement player;
     public bool detecterJoueur;
 
-    // Use this for initialization
-    void Start()
-    {
+	// Use this for initialization
+	void Start () {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerMovement>();
@@ -41,10 +39,9 @@ public class EnemyScript : MonoBehaviour
         timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
         timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+	
+	// Update is called once per frame
+	void Update () {
         if (moving)
         {
             timeToMoveCounter -= Time.deltaTime;
@@ -78,26 +75,21 @@ public class EnemyScript : MonoBehaviour
                     moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed, 0f);
                 }
 
-                /*if (moveDirection.x <= 0f)
+                if (moveDirection.x <= 0f)
                 {
                     anim.SetFloat("moveX", -1f);
                 }
                 else
                 {
                     anim.SetFloat("moveX", 1f);
-                }*/
+                }
             }
         }
-        if (Vector2.Distance(transform.position, player.gameObject.transform.position) >= MinDist)
-        {
-            detecterJoueur = true;
-            Debug.Log("Joueur Détecté");
-        }
-    }
+	}
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "PlayerController")
+        if (other.gameObject.name == "Player")
         {
             Debug.Log("Player dead");
         }
@@ -112,5 +104,4 @@ public class EnemyScript : MonoBehaviour
     {
         detecterJoueur = true;
     }
-
 }
