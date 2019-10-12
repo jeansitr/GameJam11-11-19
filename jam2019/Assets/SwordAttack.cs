@@ -8,28 +8,15 @@ public class SwordAttack : MonoBehaviour
     //public GameObject damageNumber;
     public GameObject damageBurst;
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        
-        /*if (other.gameObject.tag == "Enemy")
+        // Is this a shot?
+        EnemyScript enemy = otherCollider.gameObject.GetComponent<EnemyScript>();
+        if (enemy != null)
         {
-            other.gameObject.GetComponent<EnemyHealth>().Hit(damage);
-            var clone = (GameObject)Instantiate(damageNumber, other.transform.position, Quaternion.Euler(Vector3.zero));
-            if (other.gameObject.GetComponent<EnemyHealth>().invincibility)
-            {
-                clone.GetComponent<FloatingNumbers>().damageNumber = 0;
-            }
-            else
-            {
-                clone.GetComponent<FloatingNumbers>().damageNumber = damage;
-            }
-
-            Destroy(gameObject);
+            Instantiate(damageBurst, transform.position, transform.rotation);
+            Destroy(enemy.gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }*/
     }
 
     void OnTriggerEnter(Collider col)
