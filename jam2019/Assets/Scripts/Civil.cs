@@ -15,8 +15,6 @@ public class Civil : MonoBehaviour
     void Start()
     {
         myFeet = transform.Find("Feet");
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        targetFeet = target.Find("Feet");
     }
 
     // Update is called once per frame
@@ -29,5 +27,11 @@ public class Civil : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetFeet.position.x, target.position.y), speed * Time.deltaTime);
             }
         }
+    }
+
+    public void Follow(Transform newTarget)
+    {
+        target = GameObject.Find("PlayerController").GetComponent<Transform>();
+        targetFeet = target.Find("Feet");
     }
 }
