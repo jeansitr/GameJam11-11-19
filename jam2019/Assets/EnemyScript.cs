@@ -5,61 +5,112 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-    public float duration;    //the max time of a walking session (set to ten)
-    public float elapsedTime = 0f; //time since started walk
-    public float wait = 0f; //wait this much time
-    public float waitTime = 0f; //waited this much time
+    public float moveSpeed;
+    public float MinDist = 5f;
+    public float MaxDist = 10f;
 
-    float randomX;  //randomly go this X direction
-    float randomY;  //randomly go this Z direction
+    private Animator anim;
+    private Rigidbody2D myRigidbody;
+    public GameObject PlayerFeet;
 
-    bool move = true; //start moving
+    private bool moving;
 
+    private float timeBetweenMove;
+    public float timeBetweenMoveOriginal;
+    private float timeBetweenMoveCounter;
+
+    public float timeToMove;
+    private float timeToMoveCounter;
+
+    private Vector3 moveDirection;
+
+    public float waitToReload;
+    private PlayerMovement player;
+    public bool detecterJoueur;
+
+    // Use this for initialization
     void Start()
     {
-        randomX = Random.Range(-3, 3);
-        randomY = Random.Range(-3, 3);
+        anim = GetComponent<Animator>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        player = FindObjectOfType<PlayerMovement>();
+
+        //timeBetweenMoveCounter = timeBetweenMove;
+        //timeToMoveCounter = timeToMove;
+        timeBetweenMove = timeBetweenMoveOriginal;
+        timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
+        timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
     }
 
+    // Update is called once per frame
     void Update()
     {
-
-
-
-        //Debug.Log (elapsedTime);
-
-        if (elapsedTime < duration && move)
+        if (moving)
         {
-            //if its moving and didn't move too much
-            transform.Translate(new Vector3(randomX, randomY, 0) * Time.deltaTime);
-            elapsedTime += Time.deltaTime;
+            timeToMoveCounter -= Time.deltaTime;
+            myRigidbody.velocity = moveDirection;
 
+            if (timeToMoveCounter < 0f)
+            {
+                moving = false;
+                //timeBetweenMoveCounter = timeBetweenMove;
+                timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
+            }
         }
         else
         {
-            //do not move and start waiting for random time
-            move = false;
-            wait = Random.Range(5, 10);
-            waitTime = 0f;
+            timeBetweenMoveCounter -= Time.deltaTime;
+            myRigidbody.velocity = Vector2.zero;
+            if (timeBetweenMoveCounter < 0f)
+            {
+                moving = true;
+                //timeToMoveCounter = timeToMove;
+                timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
+
+                if (Vector3.Distance(player.transform.position, transform.position) < 10f && detecterJoueur)
+                {
+                    timeBetweenMove = 0.5f;
+                    moveDirection = player.transform.position - transform.position;
+                }
+                else
+                {
+                    timeBetweenMove = timeBetweenMoveOriginal;
+                    moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed, 0f);
+                }
+
+                /*if (moveDirection.x <= 0f)
+                {
+                    anim.SetFloat("moveX", -1f);
+                }
+                else
+                {
+                    anim.SetFloat("moveX", 1f);
+                }*/
+            }
         }
-
-        if (waitTime < wait && !move)
+        if (Vector2.Distance(transform.position, player.gameObject.transform.position) >= MinDist)
         {
-            //you are waiting
-            waitTime += Time.deltaTime;
-
-
-        }
-        else
-        {
-            //done waiting. Move to these random directions
-            move = true;
-            randomX = Random.Range(-3, 3);
-            randomY = Random.Range(-3, 3);
+            detecterJoueur = true;
+            Debug.Log("Joueur Détecté");
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "PlayerController")
+        {
+            Debug.Log("Player dead");
+        }
+    }
 
+    public void Die()
+    {
+        Debug.Log("Enemy dead");
+    }
 
+    public void WakeUp()
+    {
+        detecterJoueur = true;
+    }
 
 }

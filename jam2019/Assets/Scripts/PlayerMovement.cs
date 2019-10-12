@@ -8,62 +8,136 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
-    private Animator anim;
+    public Animator anim;
+
+    public float joySens = 0.7f;
+
+    float moveX = 0;
+    float moveY = 0;
+    float lastMoveX = 0;
+    float lastMoveY = -1;
+    bool moving = false;
+    bool attacking = false;
 
     // Use this for initialization
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        float moveX = 0;
-        float moveY = 0;
+        moveX = 0;
+        moveY = 0;
 
-        if (Input.GetKey(KeyCode.D))
+        moving = false;
+
+        /*if (Input.GetKey(KeyCode.D))
         {
             moveX = 1;
+            lastMoveX = 1;
+            lastMoveY = 0;
+            moving = true;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             moveX = -1;
+            lastMoveX = -1;
+            lastMoveY = 0;
+            moving = true;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             moveY = 1;
+            lastMoveY = 1;
+            lastMoveX = 0;
+            moving = true;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             moveY = -1;
-        }
+            lastMoveY = -1;
+            lastMoveX = 0;
+            moving = true;
+        }*/
 
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A))
+        if (Input.GetAxis("Horizontal") >= joySens)
         {
-            moveX = 0;
+            moveX = 1;
+            lastMoveX = 1;
+            lastMoveY = 0;
+            //moving = true;
         }
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
+        if (Input.GetAxis("Horizontal") <= -joySens)
         {
-            moveY = 0;
+            moveX = -1;
+            lastMoveX = -1;
+            lastMoveY = 0;
+            //moving = true;
         }
 
+        if (Input.GetAxis("Vertical") >= joySens)
+        {
+            moveY = 1;
+            lastMoveY = 1;
+            lastMoveX = 0;
+            //moving = true;
+        }
+
+        if (Input.GetAxis("Vertical") <= -joySens)
+        {
+            moveY = -1;
+            lastMoveY = -1;
+            lastMoveX = 0;
+            //moving = true;
+        }
+
+        if (Input.GetKey(KeyCode.JoystickButton1))
+        {
+            attacking = true;
+        }
+        else
+        {
+            attacking = false;
+        }
+
+       
+        
         //anim.SetFloat("moveX", Input.GetAxis("Horizontal"));
         //anim.SetFloat("moveY", Input.GetAxis("Vertical"));
-        anim.SetFloat("moveY", moveY);
-        anim.SetFloat("moveX", moveX);
+        
+        //anim.SetBool("moving", moving);
     }
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-
-        rb2d.velocity = new Vector2(x * speed, y * speed);
+        float x = 0;
+        float y = 0;
+        /*if (moving)
+        {*/
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
+        //}
+        
+        if ((x >= joySens || x <= -joySens) || ((y >= joySens || y <= -joySens)) || (y >= joySens || x <= -joySens) || (x >= joySens || y >= joySens) || (x >= joySens || y <= -joySens) || (y <= -joySens || x <= -joySens))
+        {
+            rb2d.velocity = new Vector2(x * speed, y * speed);
+            moving = true;
+        }
+        else
+        {
+            rb2d.velocity = new Vector2(0 * speed, 0 * speed);
+        }
+        anim.SetBool("moving", moving);
+        anim.SetBool("Attack", attacking);
+        anim.SetFloat("moveY", moveY);
+        anim.SetFloat("moveX", moveX);
+        anim.SetFloat("lastMoveX", lastMoveX);
+        anim.SetFloat("lastMoveY", lastMoveY);
     }
 }
