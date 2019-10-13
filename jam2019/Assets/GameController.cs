@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     float currentLvl;
     public GameObject[] mobsListDrought = new GameObject[2];
     public GameObject[] mobsListIce = new GameObject[2];
-    public GameObject[] mmobsListLavat = new GameObject[2];
+    public GameObject[] mobsListLava = new GameObject[2];
 
     // Start is called before the first frame update
     void Start()
@@ -60,12 +60,40 @@ public class GameController : MonoBehaviour
                 }
             case "ice":
                 {
-
+                    GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
+                    List<GameObject> spawnChosen = new List<GameObject>();
+                    for (int i = 0; i < EnemyOnIce; i++)
+                    {
+                        GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
+                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
+                        if (!spawnChosen.Contains(spawn))
+                        {
+                            spawnChosen.Add(spawn);
+                        }
+                    }
+                    foreach (GameObject spawnpoint in spawnChosen)
+                    {
+                        Instantiate(mobsListIce[Random.Range(0, mobsListIce.Length)], spawnpoint.transform, false);
+                    }
                     break;
                 }
             case "lava":
                 {
-
+                    GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
+                    List<GameObject> spawnChosen = new List<GameObject>();
+                    for (int i = 0; i < EnemyOnLava; i++)
+                    {
+                        GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
+                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
+                        if (!spawnChosen.Contains(spawn))
+                        {
+                            spawnChosen.Add(spawn);
+                        }
+                    }
+                    foreach (GameObject spawnpoint in spawnChosen)
+                    {
+                        Instantiate(mobsListLava[Random.Range(0, mobsListLava.Length)], spawnpoint.transform, false);
+                    }
                     break;
                 }
         }

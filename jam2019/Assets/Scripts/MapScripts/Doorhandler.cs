@@ -13,6 +13,6 @@ public class Doorhandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EditorSceneManager.LoadScene(1);
+        EditorSceneManager.LoadScene(2);
     }
 }
