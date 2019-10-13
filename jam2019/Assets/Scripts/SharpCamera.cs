@@ -7,6 +7,10 @@ public class SharpCamera : MonoBehaviour
     public GameObject player;
     public Camera main_camera;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
     void Update()
     {
         if (player != null)

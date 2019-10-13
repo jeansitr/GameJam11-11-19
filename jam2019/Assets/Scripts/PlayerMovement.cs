@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         timeLeft = timeBetweenAttack;
+        DontDestroyOnLoad(this);
     }
 
     private void Update()

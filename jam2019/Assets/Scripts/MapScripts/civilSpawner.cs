@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lava : MonoBehaviour
+public class civilSpawner : MonoBehaviour
 {
-    public Transform[] possibleSpawn = new Transform[11];
+    public Transform[] possibleSpawn;
     public GameObject civil;
 
     // Start is called before the first frame update

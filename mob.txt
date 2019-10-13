@@ -1,7 +1,7 @@
 Sécheresse:
 Tornade X
 Scorpion
-Rat
+Rat X
 
 Glace:
 Snowman X
