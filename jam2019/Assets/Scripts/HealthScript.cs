@@ -12,6 +12,7 @@ public class HealthScript : MonoBehaviour
     /// Total hitpoints
     /// </summary>
     public int hp = 1;
+    public int scoreToGive = 10;
     public int touchDamage = 1;
 
     //Show Health in UI
@@ -35,6 +36,7 @@ public class HealthScript : MonoBehaviour
     /// <param name="damageCount"></param>
     public void Damage(int damageCount)
     {
+        Debug.Log("receiving damage");
         hp -= damageCount;
 
         if (particleEffect != null)
@@ -45,7 +47,10 @@ public class HealthScript : MonoBehaviour
         {
             // Dead!
             Destroy(gameObject);
-            
+            if (isEnemy)
+            {
+                FindObjectOfType<GameController>().gainPoints(scoreToGive);
+            }
         }
     }
 

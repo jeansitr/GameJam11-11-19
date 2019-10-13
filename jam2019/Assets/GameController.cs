@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-
+    public UIController UI;
+    public HealthScript playerHealth;
+    int score;
     public int EnemyOnDrought = 1;
     public int EnemyOnIce = 5;
     public int EnemyOnLava = 4;
@@ -25,7 +27,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UI.updateScore(score);
+        UI.updateHealth(playerHealth.hp);
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -66,5 +69,10 @@ public class GameController : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    public void gainPoints(int scoreToAdd)
+    {
+        score += scoreToAdd;
     }
 }
