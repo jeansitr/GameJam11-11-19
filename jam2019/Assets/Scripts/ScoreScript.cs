@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
+    //Sounds
+    AudioSource audioPoint;
+    public AudioClip point;
+
     /// <summary>
     /// Total hitpoints
     /// </summary>
@@ -17,11 +21,13 @@ public class ScoreScript : MonoBehaviour
 
     public void Start()
     {
+        audioPoint = GetComponent<AudioSource>();
         SetCountScore();
     }
 
     public void SetCountScore()
     {
         countScore.text = "Score: " + score.ToString();
+        audioPoint.PlayOneShot(point, 0.7F);
     }
 }
