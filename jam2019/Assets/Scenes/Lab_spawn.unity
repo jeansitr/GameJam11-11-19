@@ -12604,18 +12604,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1322330448}
   playerHealth: {fileID: 1734708995}
-  EnemyOnDrought: 38
-  EnemyOnIce: 12
-  EnemyOnLava: 28
+  EnemyOnDrought: 1
+  EnemyOnIce: 5
+  EnemyOnLava: 4
   mobsListDrought:
-  - {fileID: 4287138745763406290, guid: 93eb4f05afd71dd4c9d0906695ab9735, type: 3}
-  - {fileID: 3289593560274410838, guid: b1770462cad4ec040b66683c443afb8f, type: 3}
-  mobsListIce:
   - {fileID: 6350671802249717160, guid: 90e0e31e2b1a09546a54d5ab7ad50d2d, type: 3}
-  - {fileID: 4671204206799153997, guid: b755992b90d528d48a0b822f2b2b6fc7, type: 3}
+  mobsListIce:
+  - {fileID: 0}
+  - {fileID: 0}
   mobsListLava:
-  - {fileID: 2822700755389732623, guid: 11d40d44d54782d428ba6a670ca7df71, type: 3}
-  - {fileID: 9106468574765608190, guid: 6c040d77545e7854ba80f76ba9462e9a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1711876695
 Transform:
   m_ObjectHideFlags: 0

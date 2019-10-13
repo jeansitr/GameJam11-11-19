@@ -10,11 +10,13 @@ public class Civil : MonoBehaviour
     public Transform target;
     private Transform targetFeet;
     private Transform myFeet;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         myFeet = transform.Find("Feet");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,33 @@ public class Civil : MonoBehaviour
             if(Vector2.Distance(myFeet.position, targetFeet.position) > 2)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetFeet.position.x, target.position.y), speed * Time.deltaTime);
+                float adjacent = transform.position.x - target.transform.position.x;
+                float oppose = target.transform.position.y - transform.position.y;
+
+                float angle = Mathf.Atan2(oppose, adjacent);
+                angle = ((angle * 180) / Mathf.PI);
+                
+
+                if (angle > -45f && angle <= 45f)
+                {
+                    anim.SetFloat("moveX", -1);
+                    anim.SetFloat("moveY", 0);
+                }
+                else if (angle > 45f && angle <= 135f)
+                {
+                    anim.SetFloat("moveX", 0);
+                    anim.SetFloat("moveY", 1);
+                }
+                else if (angle > 135f || angle <= -135f)
+                {
+                    anim.SetFloat("moveX", 1);
+                    anim.SetFloat("moveY", 0);
+                }
+                else
+                {
+                    anim.SetFloat("moveX", 0);
+                    anim.SetFloat("moveY", -1);
+                }
             }
         }
     }

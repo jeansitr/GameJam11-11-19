@@ -9,12 +9,16 @@ public class SnowmanScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerMovement playermv = FindObjectOfType<PlayerMovement>();
+        player = playermv.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform);
+        if (player != null)
+        {
+            transform.LookAt(player.transform);
+        }
     }
 }

@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 1744933893158468079}
   - component: {fileID: 486047036761623699}
   - component: {fileID: 5213690297597282262}
+<<<<<<< HEAD
   - component: {fileID: 114327254696236830}
-  - component: {fileID: 4029229701122396325}
+=======
+  - component: {fileID: 1380351272247253418}
+>>>>>>> bab1a40f7661406f7e38fe90886a993831a72033
   m_Layer: 0
   m_Name: civil
   m_TagString: Civil
@@ -99,7 +102,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0673}
   serializedVersion: 2
   m_Radius: 0.03328053
+<<<<<<< HEAD
 --- !u!114 &114327254696236830
+=======
+--- !u!114 &1380351272247253418
+>>>>>>> bab1a40f7661406f7e38fe90886a993831a72033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,28 +118,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509258ebca7bab04382e30c752f36d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+<<<<<<< HEAD
+  speed: 4
   target: {fileID: 0}
---- !u!95 &4029229701122396325
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2444243890708398457}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 466f06abfc733924e8f80b622c9d6bdd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  myFeet: {fileID: 1395186413605739561}
 --- !u!1 &3093870846710279450
+=======
+  speed: 0
+  target: {fileID: 0}
+  myFeet: {fileID: 0}
+--- !u!1 &4442871601425164636
+>>>>>>> bab1a40f7661406f7e38fe90886a993831a72033
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
