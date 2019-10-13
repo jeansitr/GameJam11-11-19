@@ -8,9 +8,12 @@ public class SwordAttack : MonoBehaviour
     //public GameObject damageNumber;
     public GameObject damageBurst;
 
+
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
+        Debug.Log("allo");
         HealthScript hp = otherCollider.gameObject.GetComponent<HealthScript>();
+      
         if (hp != null)
         {
             // Avoid friendly fire
@@ -20,4 +23,6 @@ public class SwordAttack : MonoBehaviour
             }
         }
     }
+   
+
 }

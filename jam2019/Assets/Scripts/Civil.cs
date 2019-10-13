@@ -33,5 +33,6 @@ public class Civil : MonoBehaviour
     {
         target = GameObject.Find("PlayerController").GetComponent<Transform>();
         targetFeet = target.Find("Feet");
+        GetComponent<Collider2D>().enabled = false;
     }
 }

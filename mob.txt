@@ -1,0 +1,12 @@
+Sécheresse:
+Tornade X
+Scorpion
+Rat X
+
+Glace:
+Snowman X
+Penguin X
+
+Lave:
+Fireball X
+Chauves-souris X
