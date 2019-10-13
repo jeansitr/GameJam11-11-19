@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Handle hitpoints and damages
@@ -13,12 +14,20 @@ public class HealthScript : MonoBehaviour
     public int hp = 1;
     public int touchDamage = 1;
 
+    //Show Health in UI
+    public Text countHealth;
+
     /// <summary>
     /// Enemy or player?
     /// </summary>
     public bool isEnemy = true;
 
     public GameObject particleEffect = null;
+
+    public void Start()
+    {
+        SetCountHealth();
+    }
 
     /// <summary>
     /// Inflicts damage and check if the object should be destroyed
@@ -27,6 +36,8 @@ public class HealthScript : MonoBehaviour
     public void Damage(int damageCount)
     {
         hp -= damageCount;
+        SetCountHealth();
+
         if (particleEffect != null)
         {
             Instantiate(particleEffect, transform.position, transform.rotation);
@@ -71,5 +82,10 @@ public class HealthScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetCountHealth()
+    {
+        countHealth.text = "Health: " + hp.ToString();
     }
 }
