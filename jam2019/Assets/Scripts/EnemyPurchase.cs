@@ -15,6 +15,7 @@ public class EnemyPurchase : MonoBehaviour
     bool detecterJoueur = false;
     ennemyScript enemyScript;
     Animator anim;
+    PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class EnemyPurchase : MonoBehaviour
         myFeet = transform.Find("Feet");
         enemyScript = GetComponent<ennemyScript>();
         anim = GetComponent<Animator>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -65,12 +67,19 @@ public class EnemyPurchase : MonoBehaviour
             }
         }
 
-        if (Vector2.Distance(transform.position, player.gameObject.transform.position) <= MinDist && detecterJoueur == false)
+        if (player != null)
         {
-            detecterJoueur = true;
-            Follow(player);
-            anim.SetBool("moving", true);
-            enemyScript.StartAttacking();
+            if (Vector2.Distance(transform.position, player.gameObject.transform.position) <= MinDist && detecterJoueur == false)
+            {
+                detecterJoueur = true;
+                Follow(player);
+                anim.SetBool("moving", true);
+                enemyScript.StartAttacking();
+            }
+        }
+        else
+        {
+            player = playerMovement.gameObject.transform;
         }
     }
 

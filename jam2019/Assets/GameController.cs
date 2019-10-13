@@ -47,12 +47,11 @@ public class GameController : MonoBehaviour
                 }
             case "Drought":
                 {
+                    Debug.Log("BUG ?");
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
-                    Debug.Log("ALLO: " + EnemyOnDrought);
                     for (int i = 0; i < EnemyOnDrought; i++)
                     {
-                        Debug.Log("SALUT");
                         GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
                         if (!spawnChosen.Contains(spawn))
                         {
@@ -61,7 +60,6 @@ public class GameController : MonoBehaviour
                     }
                     foreach (GameObject spawnpoint in spawnChosen)
                     {
-                        Debug.Log("SPAWNING MOB");
                         Instantiate(mobsListDrought[Random.Range(0,mobsListDrought.Length)], spawnpoint.transform, false);
                     }
                     break;
@@ -73,7 +71,6 @@ public class GameController : MonoBehaviour
                     for (int i = 0; i < EnemyOnIce; i++)
                     {
                         GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
-                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
                         if (!spawnChosen.Contains(spawn))
                         {
                             spawnChosen.Add(spawn);
@@ -92,7 +89,6 @@ public class GameController : MonoBehaviour
                     for (int i = 0; i < EnemyOnLava; i++)
                     {
                         GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
-                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
                         if (!spawnChosen.Contains(spawn))
                         {
                             spawnChosen.Add(spawn);
@@ -110,5 +106,10 @@ public class GameController : MonoBehaviour
     public void gainPoints(int scoreToAdd)
     {
         score += scoreToAdd;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

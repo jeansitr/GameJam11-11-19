@@ -12608,12 +12608,11 @@ MonoBehaviour:
   EnemyOnIce: 5
   EnemyOnLava: 4
   mobsListDrought:
-  - {fileID: 4287138745763406290, guid: 93eb4f05afd71dd4c9d0906695ab9735, type: 3}
-  - {fileID: 3289593560274410838, guid: b1770462cad4ec040b66683c443afb8f, type: 3}
+  - {fileID: 6350671802249717160, guid: 90e0e31e2b1a09546a54d5ab7ad50d2d, type: 3}
   mobsListIce:
   - {fileID: 0}
   - {fileID: 0}
-  mmobsListLavat:
+  mobsListLava:
   - {fileID: 0}
   - {fileID: 0}
 --- !u!4 &1711876695
