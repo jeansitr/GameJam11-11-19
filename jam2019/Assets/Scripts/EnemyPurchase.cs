@@ -42,7 +42,6 @@ public class EnemyPurchase : MonoBehaviour
                 float angle = Mathf.Atan2(oppose, adjacent);
                 angle = ((angle * 180) / Mathf.PI);
 
-
                     if (angle > -45f && angle <= 45f)
                     {
                         anim.SetFloat("moveX", -1);
@@ -63,7 +62,6 @@ public class EnemyPurchase : MonoBehaviour
                         anim.SetFloat("moveX", 0);
                         anim.SetFloat("moveY", -1);
                     }
-
             }
         }
 
