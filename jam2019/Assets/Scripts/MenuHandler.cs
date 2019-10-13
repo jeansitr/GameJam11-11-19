@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 public class MenuHandler : MonoBehaviour
 {
@@ -12,6 +11,6 @@ public class MenuHandler : MonoBehaviour
 
     public void StartGame()
     {
-        EditorSceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
