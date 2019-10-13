@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 486047036761623699}
   - component: {fileID: 5213690297597282262}
   - component: {fileID: 114327254696236830}
+  - component: {fileID: 4029229701122396325}
   m_Layer: 0
   m_Name: civil
   m_TagString: Civil
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2444243890708398457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.94, y: -0.17, z: 14.620976}
-  m_LocalScale: {x: 5, y: 15, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1395186413605739561}
   m_Father: {fileID: 0}
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 9
+  m_Sprite: {fileID: 21300032, guid: f8981ad46b27e5640b08be32efd6b00a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,9 +111,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509258ebca7bab04382e30c752f36d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 8
   target: {fileID: 0}
-  myFeet: {fileID: 1395186413605739561}
+--- !u!95 &4029229701122396325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444243890708398457}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 466f06abfc733924e8f80b622c9d6bdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3093870846710279450
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Interact : MonoBehaviour
 {
     CircleCollider2D detection;
     public Transform player;
+    public GameController gameController;
 
     // Start is called before the first frame update
     void Start()
     {
         detection = GetComponent<CircleCollider2D>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
@@ -28,15 +30,28 @@ public class Interact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Civil civil = collision.GetComponent<Civil>();
-
-        if (civil != null)
+        if (collision.tag == "Portal")
         {
-            if (civil.target == null)
+            Portal portal = collision.GetComponent<Portal>();
+
+            if (portal != null)
             {
-                civil.target = player;
-                civil.Follow(player);
-                collision.enabled = false;
+                gameController.NextLevel();
+            }
+        }
+
+        if (collision.tag == "Civil")
+        {
+            Civil civil = collision.GetComponent<Civil>();
+
+            if (civil != null)
+            {
+                if (civil.target == null)
+                {
+                    civil.target = player;
+                    civil.Follow(player);
+                    collision.enabled = false;
+                }
             }
         }
     }

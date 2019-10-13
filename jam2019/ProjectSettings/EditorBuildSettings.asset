@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lava.unity
     guid: 37242feaffd320c488c0f87a301ba12b
+  - enabled: 1
+    path: Assets/Scenes/Lab_afterLevel.unity
+    guid: fcaaf633a8ed58141af9618a8c18fc5f
   m_configObjects: {}

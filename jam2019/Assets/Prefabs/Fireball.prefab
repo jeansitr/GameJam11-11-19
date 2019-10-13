@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2822700755389732616}
   - component: {fileID: 2822700755389732618}
   - component: {fileID: 2822700755389732661}
+  - component: {fileID: 95191123345617518}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822700755389732623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.8, y: -0.75477296, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,6 +120,7 @@ MonoBehaviour:
   timeToMove: 1
   waitToReload: 2
   detecterJoueur: 1
+  hasProjectile: 0
 --- !u!50 &2822700755389732618
 Rigidbody2D:
   serializedVersion: 4
@@ -152,10 +154,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2a53aebf8c724283f78c7ddc87b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 3
   scoreToGive: 10
   touchDamage: 1
   countHealth: {fileID: 0}
   isEnemy: 1
   particleEffect: {fileID: 1348009746138368, guid: ab4122136b992134f9e19f40462d9691,
     type: 3}
+--- !u!95 &95191123345617518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822700755389732623}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59437ec75562d17419dc7722516d330f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
