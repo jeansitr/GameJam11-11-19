@@ -28,7 +28,13 @@ public class GameController : MonoBehaviour
     void Update()
     {
         UI.updateScore(score);
-        UI.updateHealth(playerHealth.hp);
+
+        int playerHP = playerHealth.hp;
+        UI.updateHealth(playerHP);
+        if (playerHP <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -43,10 +49,11 @@ public class GameController : MonoBehaviour
                 {
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
+                    Debug.Log("ALLO: " + EnemyOnDrought);
                     for (int i = 0; i < EnemyOnDrought; i++)
                     {
+                        Debug.Log("SALUT");
                         GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
-                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
                         if (!spawnChosen.Contains(spawn))
                         {
                             spawnChosen.Add(spawn);
@@ -54,6 +61,7 @@ public class GameController : MonoBehaviour
                     }
                     foreach (GameObject spawnpoint in spawnChosen)
                     {
+                        Debug.Log("SPAWNING MOB");
                         Instantiate(mobsListDrought[Random.Range(0,mobsListDrought.Length)], spawnpoint.transform, false);
                     }
                     break;

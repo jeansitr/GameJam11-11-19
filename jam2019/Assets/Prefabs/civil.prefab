@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1744933893158468079}
   - component: {fileID: 486047036761623699}
   - component: {fileID: 5213690297597282262}
+  - component: {fileID: 114327254696236830}
   m_Layer: 0
-  m_Name: Civil
+  m_Name: civil
   m_TagString: Civil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_LocalPosition: {x: -1.94, y: -0.17, z: 14.620976}
   m_LocalScale: {x: 5, y: 15, z: 1}
   m_Children:
-  - {fileID: 4369826426590256334}
+  - {fileID: 1395186413605739561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,7 +98,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0673}
   serializedVersion: 2
   m_Radius: 0.03328053
---- !u!1 &4442871601425164636
+--- !u!114 &114327254696236830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444243890708398457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509258ebca7bab04382e30c752f36d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  target: {fileID: 0}
+  myFeet: {fileID: 1395186413605739561}
+--- !u!1 &3093870846710279450
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +121,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4369826426590256334}
+  - component: {fileID: 1395186413605739561}
   m_Layer: 0
   m_Name: Feet
   m_TagString: Untagged
@@ -113,22 +129,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4369826426590256334
-RectTransform:
+--- !u!4 &1395186413605739561
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4442871601425164636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -14.620976}
-  m_LocalScale: {x: 1, y: 0.33333334, z: 1}
+  m_GameObject: {fileID: 3093870846710279450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1744933893158468079}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.002, y: -0.0705}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
