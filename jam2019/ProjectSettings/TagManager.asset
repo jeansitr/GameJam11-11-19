@@ -8,6 +8,9 @@ TagManager:
   - EnemySpawn
   - HUD
   - Camera
+  - Teleport
+  - Door
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public UIController UI;
+    public GameObject Portal;
+    public int enemyToKill;
+    public int killCount = 0;
     public HealthScript playerHealth;
     public int score;
     public int EnemyOnDrought = 1;
@@ -16,6 +19,10 @@ public class GameController : MonoBehaviour
     public GameObject[] mobsListDrought = new GameObject[2];
     public GameObject[] mobsListIce = new GameObject[2];
     public GameObject[] mobsListLava = new GameObject[2];
+    float currentLevel = 0;
+    int nextStage = 2;
+    GameObject portalLocation;
+    bool portalSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +42,11 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        if (killCount >= enemyToKill)
+        {
+            SpawnPortal();
+        }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -47,7 +59,12 @@ public class GameController : MonoBehaviour
                 }
             case "Drought":
                 {
-                    Debug.Log("BUG ?");
+                    portalSpawned = false;
+                    currentLevel += 1;
+                    playerHealth.transform.position = new Vector3(0, 5, 0);
+                    nextStage = 3;
+                    portalLocation = GameObject.FindGameObjectWithTag("Teleport");
+                    killCount = 0;
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnDrought; i++)
@@ -66,6 +83,12 @@ public class GameController : MonoBehaviour
                 }
             case "ice":
                 {
+                    portalSpawned = false;
+                    currentLevel += 1;
+                    killCount = 0;
+                    playerHealth.transform.position = new Vector3(0, 2, 0);
+                    nextStage = 4;
+                    portalLocation = GameObject.FindGameObjectWithTag("Teleport");
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnIce; i++)
@@ -84,6 +107,12 @@ public class GameController : MonoBehaviour
                 }
             case "lava":
                 {
+                    portalSpawned = false;
+                    currentLevel += 1;
+                    playerHealth.transform.position = new Vector3(0, 0, 0);
+                    killCount = 0;
+                    nextStage = 2;
+                    portalLocation = GameObject.FindGameObjectWithTag("Teleport");
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnLava; i++)
@@ -100,6 +129,14 @@ public class GameController : MonoBehaviour
                     }
                     break;
                 }
+            case "Lab_afterLevel":
+                {
+                    killCount = 0;
+                    playerHealth.transform.position = new Vector3(3, 2, 0);
+                    Doorhandler door = FindObjectOfType<Doorhandler>();
+                    door.sceneToLoad = nextStage;
+                    break;
+                }
         }
     }
 
@@ -111,5 +148,19 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void SpawnPortal()
+    {
+        if (!portalSpawned)
+        {
+            GameObject portal = portalLocation.transform.GetChild(0).gameObject;
+            portal.SetActive(true);
+            portalSpawned = true;
+        }
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Lab_afterLevel");
     }
 }
