@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject sword;
+
     public float joySens = 0.7f;
 
     float moveX = 0;
@@ -19,11 +21,17 @@ public class PlayerMovement : MonoBehaviour
     bool moving = false;
     bool attacking = false;
 
+
+    public float timeBetweenAttack;
+    float timeLeft;
+    bool hasAttacked = false;
+
     // Use this for initialization
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
+        timeLeft = timeBetweenAttack;
     }
 
     private void Update()
@@ -97,16 +105,26 @@ public class PlayerMovement : MonoBehaviour
             //moving = true;
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton1))
+        if (Input.GetKey(KeyCode.JoystickButton1)/* && hasAttacked == false*/)
         {
             attacking = true;
+            hasAttacked = true;
         }
         else
         {
             attacking = false;
         }
 
-       
+        /*if (hasAttacked)
+        {
+            
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                hasAttacked = false;
+                timeLeft = timeBetweenAttack;
+            }
+        }*/
         
         //anim.SetFloat("moveX", Input.GetAxis("Horizontal"));
         //anim.SetFloat("moveY", Input.GetAxis("Vertical"));
