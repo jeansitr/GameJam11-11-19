@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drought : MonoBehaviour
 {
-    public Vector3[] possibleSpawn = new Vector3[18];
+    public Transform[] possibleSpawn = new Transform[18];
     public GameObject civil;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class Drought : MonoBehaviour
             selected.Add(e);
 
             GameObject civilInstance = Instantiate(civil, transform);
-            civilInstance.transform.localPosition = possibleSpawn[e];
+            civilInstance.transform.position = possibleSpawn[e].position;
         }
     }
 
