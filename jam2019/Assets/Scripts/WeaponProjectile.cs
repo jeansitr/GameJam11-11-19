@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 
 /// <summary>
 /// Launch projectile
@@ -12,28 +13,31 @@ public class WeaponProjectile : MonoBehaviour
     // 1 - Designer variables
     //--------------------------------
 
+    //Sons
+    AudioSource audiolanceProjectile;
+    public AudioClip lance;
+
     /// <summary>
     /// Projectile prefab for shooting
     /// </summary>
     public Transform shotPrefab;
-
     public Transform angleLookingAt;
 
     /// <summary>
     /// Cooldown in seconds between two shots
     /// </summary>
     public float shootingRate = 0.25f;
-
-    //--------------------------------
-    // 2 - Cooldown
-    //--------------------------------
-
     private float shootCooldown;
 
     void Start()
     {
+        audiolanceProjectile = GetComponent<AudioSource>();
         shootCooldown = 0f;
     }
+
+    //--------------------------------
+    // 2 - Cooldown
+    //--------------------------------
 
     void Update()
     {
@@ -68,6 +72,7 @@ public class WeaponProjectile : MonoBehaviour
             ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
             if (shot != null)
             {
+                audiolanceProjectile.PlayOneShot(lance, 0.7F);
                 shot.isEnemyShot = isEnemy;
             }
 
