@@ -93,11 +93,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc40f1b45d2a13419f6ce0a84c18f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   damage: 1
   damageBurst: {fileID: 1348009746138368, guid: ab4122136b992134f9e19f40462d9691,
     type: 3}
 --- !u!61 &3517172514646722031
 BoxCollider2D:
+=======
+  player: {fileID: 4485336816655450636}
+  gameController: {fileID: 0}
+  numberOfFollowers: 0
+--- !u!58 &1209772702
+CircleCollider2D:
+>>>>>>> 83520495f45f8975e7244abd8ec3091713d6762f
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -226,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2a53aebf8c724283f78c7ddc87b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 500
   scoreToGive: 10
   touchDamage: 0
   countHealth: {fileID: 0}
