@@ -27,6 +27,7 @@ public class EnemyScript : MonoBehaviour
     public float waitToReload;
     private PlayerMovement player;
     public bool detecterJoueur;
+    public bool hasProjectile;
 
     // Use this for initialization
     void Start()
@@ -72,6 +73,11 @@ public class EnemyScript : MonoBehaviour
                 {
                     timeBetweenMove = 0.5f;
                     moveDirection = player.transform.position - transform.position;
+
+                    if (hasProjectile)
+                    {
+                        GetComponent<ennemyScript>().StartAttacking();
+                    }
                 }
                 else
                 {
@@ -92,7 +98,6 @@ public class EnemyScript : MonoBehaviour
         if (Vector2.Distance(transform.position, player.gameObject.transform.position) >= MinDist)
         {
             detecterJoueur = true;
-            Debug.Log("Joueur Détecté");
         }
 
         float adjacent = transform.position.x - player.transform.position.x;

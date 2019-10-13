@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     public UIController UI;
     public HealthScript playerHealth;
-    int score;
+    public int score;
     public int EnemyOnDrought = 1;
     public int EnemyOnIce = 5;
     public int EnemyOnLava = 4;
