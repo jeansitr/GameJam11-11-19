@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4485336816655450632, guid: 985a1abb9e664614fa78f38e0ad3667d,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerController noSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485336817989861376, guid: 985a1abb9e664614fa78f38e0ad3667d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3395418779901175504, guid: 985a1abb9e664614fa78f38e0ad3667d,
         type: 3}
       propertyPath: m_Name
@@ -87,5 +97,6 @@ PrefabInstance:
       propertyPath: near clip plane
       value: -10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4485336817989861383, guid: 985a1abb9e664614fa78f38e0ad3667d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 985a1abb9e664614fa78f38e0ad3667d, type: 3}
