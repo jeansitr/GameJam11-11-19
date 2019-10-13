@@ -26,7 +26,7 @@ public class HealthScript : MonoBehaviour
 
     public void Start()
     {
-        SetCountHealth();
+        
     }
 
     /// <summary>
@@ -36,7 +36,6 @@ public class HealthScript : MonoBehaviour
     public void Damage(int damageCount)
     {
         hp -= damageCount;
-        SetCountHealth();
 
         if (particleEffect != null)
         {
@@ -82,10 +81,5 @@ public class HealthScript : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void SetCountHealth()
-    {
-        countHealth.text = "Health: " + hp.ToString();
     }
 }

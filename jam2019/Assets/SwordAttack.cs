@@ -10,6 +10,7 @@ public class SwordAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
+        Debug.Log("allo");
         HealthScript hp = otherCollider.gameObject.GetComponent<HealthScript>();
         if (hp != null)
         {
