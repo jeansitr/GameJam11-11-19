@@ -35,6 +35,7 @@ public class EnemyScript : MonoBehaviour
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerMovement>();
+        PlayerFeet = player.transform.Find("Feet").gameObject;
 
         //timeBetweenMoveCounter = timeBetweenMove;
         //timeToMoveCounter = timeToMove;

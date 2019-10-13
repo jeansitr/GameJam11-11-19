@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4485336816655450636}
+  gameController: {fileID: 0}
 --- !u!58 &1209772702
 CircleCollider2D:
   m_ObjectHideFlags: 0
