@@ -9,7 +9,7 @@ public class Civil : MonoBehaviour
 
     public Transform target;
     private Transform targetFeet;
-    public Transform myFeet;
+    private Transform myFeet;
 
     // Start is called before the first frame update
     void Start()
