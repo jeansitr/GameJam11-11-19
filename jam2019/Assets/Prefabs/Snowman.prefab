@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2a53aebf8c724283f78c7ddc87b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 1
   scoreToGive: 10
   touchDamage: 1
   countHealth: {fileID: 0}
