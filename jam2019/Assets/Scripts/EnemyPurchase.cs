@@ -14,6 +14,7 @@ public class EnemyPurchase : MonoBehaviour
     public float MinDist;
     bool detecterJoueur = false;
     ennemyScript enemyScript;
+    public float distanceToKeepFromPlayer = 2;
     Animator anim;
 
     // Start is called before the first frame update
@@ -29,7 +30,7 @@ public class EnemyPurchase : MonoBehaviour
     {
         if (target != null)
         {
-            if (Vector2.Distance(myFeet.position, targetFeet.position) > 2)
+            if (Vector2.Distance(myFeet.position, targetFeet.position) > distanceToKeepFromPlayer)
             {
                 Vector2 movement = Vector2.MoveTowards(transform.position, new Vector2(targetFeet.position.x, target.position.y), speed * Time.deltaTime);
                 transform.position = movement;
