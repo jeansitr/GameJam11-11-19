@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4485336816655450636}
   gameController: {fileID: 0}
+  numberOfFollowers: 0
 --- !u!58 &1209772702
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2a53aebf8c724283f78c7ddc87b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 500
   scoreToGive: 10
   touchDamage: 0
   countHealth: {fileID: 0}

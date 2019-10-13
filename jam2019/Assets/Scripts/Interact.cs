@@ -7,6 +7,8 @@ public class Interact : MonoBehaviour
     CircleCollider2D detection;
     public Transform player;
     public GameController gameController;
+    public int numberOfFollowers = 0;
+    List<Civil> listFollower = new List<Civil>();
 
     // Start is called before the first frame update
     void Start()
@@ -48,9 +50,14 @@ public class Interact : MonoBehaviour
             {
                 if (civil.target == null)
                 {
-                    civil.target = player;
-                    civil.Follow(player);
-                    collision.enabled = false;
+                    if (!listFollower.Contains(civil))
+                    {
+                        civil.target = player;
+                        civil.Follow(player);
+                        listFollower.Add(civil);
+                        gameController.AddFollower();
+                        collision.enabled = false;
+                    }
                 }
             }
         }

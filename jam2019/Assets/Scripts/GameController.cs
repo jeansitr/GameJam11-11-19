@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public int EnemyOnDrought = 1;
     public int EnemyOnIce = 5;
     public int EnemyOnLava = 4;
+    public int pointsParVillageois = 0;
     float currentScore;
     float currentLvl;
     public GameObject[] mobsListDrought = new GameObject[2];
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
     int nextStage = 2;
     GameObject portalLocation;
     bool portalSpawned = false;
+    int nbrFollower = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,7 @@ public class GameController : MonoBehaviour
                 }
             case "Drought":
                 {
+                    nbrFollower = 0;
                     portalSpawned = false;
                     currentLevel += 1;
                     playerHealth.transform.position = new Vector3(0, 5, 0);
@@ -83,6 +86,7 @@ public class GameController : MonoBehaviour
                 }
             case "ice":
                 {
+                    nbrFollower = 0;
                     portalSpawned = false;
                     currentLevel += 1;
                     killCount = 0;
@@ -107,6 +111,7 @@ public class GameController : MonoBehaviour
                 }
             case "lava":
                 {
+                    nbrFollower = 0;
                     portalSpawned = false;
                     currentLevel += 1;
                     playerHealth.transform.position = new Vector3(0, 0, 0);
@@ -131,6 +136,8 @@ public class GameController : MonoBehaviour
                 }
             case "Lab_afterLevel":
                 {
+                    Debug.Log("FINI LE LVL AVEC " + nbrFollower + " FOLLOWERS");
+                    score += (pointsParVillageois * nbrFollower);
                     killCount = 0;
                     playerHealth.transform.position = new Vector3(3, 2, 0);
                     Doorhandler door = FindObjectOfType<Doorhandler>();
@@ -162,5 +169,10 @@ public class GameController : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene("Lab_afterLevel");
+    }
+
+    public void AddFollower()
+    {
+        nbrFollower += 1;
     }
 }
