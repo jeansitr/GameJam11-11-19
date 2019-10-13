@@ -154,7 +154,7 @@ Transform:
   m_Children:
   - {fileID: 1915685414}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &240098741
 GameObject:
@@ -26874,7 +26874,7 @@ Transform:
   m_Children:
   - {fileID: 1547656193}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065855977
 GameObject:
@@ -26921,7 +26921,7 @@ Transform:
   - {fileID: 498125815}
   - {fileID: 240098742}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1065855980
 TilemapRenderer:
@@ -27055,7 +27055,7 @@ PrefabInstance:
     - target: {fileID: 1029484607796854192, guid: 76d7cf6b47457b8459d33878228ccb02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1029484607796854192, guid: 76d7cf6b47457b8459d33878228ccb02,
         type: 3}
@@ -27723,6 +27723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 1322330448}
+  Portal: {fileID: 18373959560426764, guid: a5211f626e869e648958f09f4c25abcb, type: 3}
+  enemyToKill: 5
+  killCount: 0
   playerHealth: {fileID: 1734708995}
   score: 0
   EnemyOnDrought: 38
@@ -27762,11 +27765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerController
-      objectReference: {fileID: 0}
-    - target: {fileID: 4485336816655450632, guid: 985a1abb9e664614fa78f38e0ad3667d,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4485336816655450636, guid: 985a1abb9e664614fa78f38e0ad3667d,
         type: 3}
@@ -27823,9 +27821,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1109574824, guid: 985a1abb9e664614fa78f38e0ad3667d, type: 3}
-      propertyPath: hp
-      value: 5
+    - target: {fileID: 1209772703, guid: 985a1abb9e664614fa78f38e0ad3667d, type: 3}
+      propertyPath: gameController
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 985a1abb9e664614fa78f38e0ad3667d, type: 3}
@@ -28197,6 +28195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4602d0d6749a72040a4f0ded0b0ccd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: 2
 --- !u!1 &2140013439
 GameObject:
   m_ObjectHideFlags: 0

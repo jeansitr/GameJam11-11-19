@@ -18,7 +18,7 @@ public class SnowmanScript : MonoBehaviour
     {
         if (player != null)
         {
-            transform.LookAt(player.transform);
+            transform.LookAt(player.transform.Find("Feet"));
         }
     }
 }
