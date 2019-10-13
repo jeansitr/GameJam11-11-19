@@ -39,6 +39,65 @@ TextureImporter:
     21300068: lab_door_34
     21300070: lab_door_35
     21300072: lab_door_36
+    21300074: lab_door_37
+    21300076: lab_door_38
+    21300078: lab_door_39
+    21300080: lab_door_40
+    21300082: lab_door_41
+    21300084: lab_door_42
+    21300086: lab_door_43
+    21300088: lab_door_44
+    21300090: lab_door_45
+    21300092: lab_door_46
+    21300094: lab_door_47
+    21300096: lab_door_48
+    21300098: lab_door_49
+    21300100: lab_door_50
+    21300102: lab_door_51
+    21300104: lab_door_52
+    21300106: lab_door_53
+    21300108: lab_door_54
+    21300110: lab_door_55
+    21300112: lab_door_56
+    21300114: lab_door_57
+    21300116: lab_door_58
+    21300118: lab_door_59
+    21300120: lab_door_60
+    21300122: lab_door_61
+    21300124: lab_door_62
+    21300126: lab_door_63
+    21300128: lab_door_64
+    21300130: lab_door_65
+    21300132: lab_door_66
+    21300134: lab_door_67
+    21300136: lab_door_68
+    21300138: lab_door_69
+    21300140: lab_door_70
+    21300142: lab_door_71
+    21300144: lab_door_72
+    21300146: lab_door_73
+    21300148: lab_door_74
+    21300150: lab_door_75
+    21300152: lab_door_76
+    21300154: lab_door_77
+    21300156: lab_door_78
+    21300158: lab_door_79
+    21300160: lab_door_80
+    21300162: lab_door_81
+    21300164: lab_door_82
+    21300166: lab_door_83
+    21300168: lab_door_84
+    21300170: lab_door_85
+    21300172: lab_door_86
+    21300174: lab_door_87
+    21300176: lab_door_88
+    21300178: lab_door_89
+    21300180: lab_door_90
+    21300182: lab_door_91
+    21300184: lab_door_92
+    21300186: lab_door_93
+    21300188: lab_door_94
+    21300190: lab_door_95
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -82,7 +141,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,10 +183,10 @@ TextureImporter:
       name: lab_door_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a27645256d38fe34d8a6e237260953f8
+      spriteID: f14ca72272f5eb84fbbc366f3b9584f9
       vertices: []
       indices: 
       edges: []
@@ -144,10 +203,10 @@ TextureImporter:
       name: lab_door_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 72
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23bcbc369d2945840ab88dd99bfa2861
+      spriteID: 54a53ce6cb0be834a8ef2bb4685eeced
       vertices: []
       indices: 
       edges: []
@@ -164,10 +223,10 @@ TextureImporter:
       name: lab_door_2
       rect:
         serializedVersion: 2
-        x: 145
+        x: 144
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +234,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 874f1ff4971647741bbb0c4c06fffe6e
+      spriteID: 869259ffc7f94a040afd1314d428dd75
       vertices: []
       indices: 
       edges: []
@@ -184,10 +243,10 @@ TextureImporter:
       name: lab_door_3
       rect:
         serializedVersion: 2
-        x: 217
+        x: 216
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,7 +254,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba3ee8041fae86048899d8d7153923a6
+      spriteID: 520d5aa6de146614e82c5e9582d047e4
       vertices: []
       indices: 
       edges: []
@@ -204,10 +263,10 @@ TextureImporter:
       name: lab_door_4
       rect:
         serializedVersion: 2
-        x: 289
+        x: 288
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c0524e363a4c84d8afde1d0d89a5df
+      spriteID: 7fc109b016731954cabaa4d76ff12df4
       vertices: []
       indices: 
       edges: []
@@ -224,10 +283,10 @@ TextureImporter:
       name: lab_door_5
       rect:
         serializedVersion: 2
-        x: 361
+        x: 360
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,7 +294,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba26a970f28da384da6a6a0c6e62c8aa
+      spriteID: b8fcfc5c89bbcec468423063d85fd4ea
       vertices: []
       indices: 
       edges: []
@@ -244,10 +303,10 @@ TextureImporter:
       name: lab_door_6
       rect:
         serializedVersion: 2
-        x: 433
+        x: 432
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +314,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc9f7d5c842295e4e8c2c2591ca27f97
+      spriteID: cccbee49ed9563847aafac78e975bfad
       vertices: []
       indices: 
       edges: []
@@ -264,10 +323,10 @@ TextureImporter:
       name: lab_door_7
       rect:
         serializedVersion: 2
-        x: 505
+        x: 504
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +334,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d1166ad5ab769446a6d6da24377b3e6
+      spriteID: 984de467c83bd5d40a76cd083ac3ccad
       vertices: []
       indices: 
       edges: []
@@ -284,10 +343,10 @@ TextureImporter:
       name: lab_door_8
       rect:
         serializedVersion: 2
-        x: 577
+        x: 576
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +354,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10a149f2653651142b914880aed0a80c
+      spriteID: 7a23a8f428732454e96e15699f524b86
       vertices: []
       indices: 
       edges: []
@@ -304,10 +363,10 @@ TextureImporter:
       name: lab_door_9
       rect:
         serializedVersion: 2
-        x: 649
+        x: 648
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +374,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a7b344fd662a742be3724f287020c5
+      spriteID: 1b1056357243efa4f99baa80309b1282
       vertices: []
       indices: 
       edges: []
@@ -324,10 +383,10 @@ TextureImporter:
       name: lab_door_10
       rect:
         serializedVersion: 2
-        x: 721
+        x: 720
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,7 +394,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3679996e3c63a94abc7a62bca425d8a
+      spriteID: 9a2245cfe316d8c4696d2f2708a432dc
       vertices: []
       indices: 
       edges: []
@@ -344,10 +403,10 @@ TextureImporter:
       name: lab_door_11
       rect:
         serializedVersion: 2
-        x: 793
+        x: 792
         y: 672
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,7 +414,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cda4ae4da2c1b746a325fa4da5e68e7
+      spriteID: f5c360d923a119548af881f47715d75c
       vertices: []
       indices: 
       edges: []
@@ -364,10 +423,10 @@ TextureImporter:
       name: lab_door_12
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,7 +434,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f3e284ffe105cf4f8fe2753721fa221
+      spriteID: d3617f912eba3204dbfe1f3966ea1785
       vertices: []
       indices: 
       edges: []
@@ -384,10 +443,10 @@ TextureImporter:
       name: lab_door_13
       rect:
         serializedVersion: 2
-        x: 73
+        x: 72
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,7 +454,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3040cbfac8808e344acb40f75aa29273
+      spriteID: d0e2b00943fefe440aaca8901cfa4c76
       vertices: []
       indices: 
       edges: []
@@ -404,10 +463,10 @@ TextureImporter:
       name: lab_door_14
       rect:
         serializedVersion: 2
-        x: 145
+        x: 144
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,7 +474,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adeb05ebb2676ec4ba55235115bca694
+      spriteID: 5378c0bc71db9ff4192c649df9320a62
       vertices: []
       indices: 
       edges: []
@@ -424,10 +483,10 @@ TextureImporter:
       name: lab_door_15
       rect:
         serializedVersion: 2
-        x: 217
+        x: 216
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,7 +494,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8061276d9b02c04287e39ed512cf45b
+      spriteID: 4a0f63743c3caaa4fa7d08510b31aae4
       vertices: []
       indices: 
       edges: []
@@ -444,10 +503,10 @@ TextureImporter:
       name: lab_door_16
       rect:
         serializedVersion: 2
-        x: 289
+        x: 288
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,7 +514,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd2b7adef96e6b940bea039ba04b6830
+      spriteID: 57ae99f068e1d1e45ba2e7f412645ebe
       vertices: []
       indices: 
       edges: []
@@ -464,10 +523,10 @@ TextureImporter:
       name: lab_door_17
       rect:
         serializedVersion: 2
-        x: 361
+        x: 360
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,7 +534,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9731dae3a7ca1bf4fb20eb89093bed3f
+      spriteID: 37f7c92fec1bd0547a77770745dcf194
       vertices: []
       indices: 
       edges: []
@@ -484,10 +543,10 @@ TextureImporter:
       name: lab_door_18
       rect:
         serializedVersion: 2
-        x: 433
+        x: 432
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,7 +554,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5aff22e05cbfd2349af4185ecc6d38c5
+      spriteID: 32cba98b1c324334bad1dac21a34b315
       vertices: []
       indices: 
       edges: []
@@ -504,10 +563,10 @@ TextureImporter:
       name: lab_door_19
       rect:
         serializedVersion: 2
-        x: 505
+        x: 504
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,7 +574,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df2bb60cb81b04044b95f0dd61b6bff1
+      spriteID: 46ff842af0a4fdd47812601809a3f6a0
       vertices: []
       indices: 
       edges: []
@@ -524,10 +583,10 @@ TextureImporter:
       name: lab_door_20
       rect:
         serializedVersion: 2
-        x: 577
+        x: 576
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,7 +594,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 332bee4623016094b8ab08930f732341
+      spriteID: c7fb715bc307ce24b8ede9424f40fab7
       vertices: []
       indices: 
       edges: []
@@ -544,10 +603,10 @@ TextureImporter:
       name: lab_door_21
       rect:
         serializedVersion: 2
-        x: 649
+        x: 648
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,7 +614,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e2a9d912c64bc4aa75da2b8f066ce0
+      spriteID: 9a3712034f5efce459be5e37df8d66ad
       vertices: []
       indices: 
       edges: []
@@ -564,10 +623,10 @@ TextureImporter:
       name: lab_door_22
       rect:
         serializedVersion: 2
-        x: 721
+        x: 720
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,7 +634,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e994ac67feaacd34e87ad3b657b0cb31
+      spriteID: d74128dabe953084f9d420af1abfde1a
       vertices: []
       indices: 
       edges: []
@@ -584,10 +643,10 @@ TextureImporter:
       name: lab_door_23
       rect:
         serializedVersion: 2
-        x: 793
+        x: 792
         y: 576
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,7 +654,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa92740abe2faae42a5885c7bbb4aebd
+      spriteID: 46540a3b51a4bec4ebf7d0de35fba887
       vertices: []
       indices: 
       edges: []
@@ -604,10 +663,10 @@ TextureImporter:
       name: lab_door_24
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,7 +674,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438a85a47362584419492f91222918cc
+      spriteID: 960b09f625b66644ba22c7a7fdf2d0cb
       vertices: []
       indices: 
       edges: []
@@ -624,10 +683,10 @@ TextureImporter:
       name: lab_door_25
       rect:
         serializedVersion: 2
-        x: 73
+        x: 72
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,7 +694,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f944ff1dd848f1944a0291f1dfbe545b
+      spriteID: aa626db75a13b8444964e979a015bf36
       vertices: []
       indices: 
       edges: []
@@ -644,10 +703,10 @@ TextureImporter:
       name: lab_door_26
       rect:
         serializedVersion: 2
-        x: 145
+        x: 144
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,7 +714,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eb1d076e512c0542ad14f8cb60e47ea
+      spriteID: 0f2cb64a5e35c3448b81c877e48349bf
       vertices: []
       indices: 
       edges: []
@@ -664,10 +723,10 @@ TextureImporter:
       name: lab_door_27
       rect:
         serializedVersion: 2
-        x: 218
-        y: 481
-        width: 71
-        height: 80
+        x: 216
+        y: 480
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,7 +734,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be0536deed2e8b4bae56976b4a882f8
+      spriteID: 12e5b290f7a7c874f87c80929848e91c
       vertices: []
       indices: 
       edges: []
@@ -684,10 +743,10 @@ TextureImporter:
       name: lab_door_28
       rect:
         serializedVersion: 2
-        x: 289
+        x: 288
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -695,7 +754,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a9fbf0a9a577c40b04548d5cd5b5bf
+      spriteID: 252f023ea9c62044c8e128ac11ec364c
       vertices: []
       indices: 
       edges: []
@@ -704,10 +763,10 @@ TextureImporter:
       name: lab_door_29
       rect:
         serializedVersion: 2
-        x: 361
+        x: 360
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,7 +774,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d1757f94b76f0342993d18f27226802
+      spriteID: e6a700e56b562914993ebf3e69dc62d4
       vertices: []
       indices: 
       edges: []
@@ -724,10 +783,10 @@ TextureImporter:
       name: lab_door_30
       rect:
         serializedVersion: 2
-        x: 433
+        x: 432
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,7 +794,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f42a39a32f4f194981c92660e64a5d3
+      spriteID: c4bd2408668cd384b8c7ba496c6d659b
       vertices: []
       indices: 
       edges: []
@@ -744,10 +803,10 @@ TextureImporter:
       name: lab_door_31
       rect:
         serializedVersion: 2
-        x: 508
-        y: 479
-        width: 71
-        height: 80
+        x: 504
+        y: 480
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,7 +814,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce39ff7eabac8d6488740772eba14f93
+      spriteID: c3d764df6fdadc74a8f8f101cb47cf2b
       vertices: []
       indices: 
       edges: []
@@ -764,10 +823,10 @@ TextureImporter:
       name: lab_door_32
       rect:
         serializedVersion: 2
-        x: 577
+        x: 576
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,7 +834,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47f94131bccc1d348999df12a9cd5a0c
+      spriteID: 8af543966dc2b9149ad564ad55de2d5f
       vertices: []
       indices: 
       edges: []
@@ -784,10 +843,10 @@ TextureImporter:
       name: lab_door_33
       rect:
         serializedVersion: 2
-        x: 649
+        x: 648
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -795,7 +854,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3982c0ccd2d5bc41a7e5de6bcfa8097
+      spriteID: 58225bd9516cfb640aa74366eb237ca4
       vertices: []
       indices: 
       edges: []
@@ -804,10 +863,10 @@ TextureImporter:
       name: lab_door_34
       rect:
         serializedVersion: 2
-        x: 721
+        x: 720
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -815,7 +874,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd6076818ae6b64c81634906c2399ac
+      spriteID: b4fdcb5a16ecc9d4b8c0d7be065bde0e
       vertices: []
       indices: 
       edges: []
@@ -824,10 +883,10 @@ TextureImporter:
       name: lab_door_35
       rect:
         serializedVersion: 2
-        x: 793
+        x: 792
         y: 480
-        width: 71
-        height: 80
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -835,7 +894,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b33b54a9550c29242bbe2499d7429443
+      spriteID: 190e6d9dfa19cd3468643ac88bf43e2e
       vertices: []
       indices: 
       edges: []
@@ -844,10 +903,10 @@ TextureImporter:
       name: lab_door_36
       rect:
         serializedVersion: 2
-        x: 377
-        y: 291
-        width: 12
-        height: 14
+        x: 0
+        y: 384
+        width: 72
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -855,7 +914,1187 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f19a0777b9b5d4fb38a86f938b881e
+      spriteID: a9cc8d971d4650342aa60fb27183714e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_37
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dd39768dd8f164cb4294f9353d5ca0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cab3bc3ec775b40846ab70c3a329a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989290b6f3a428640952a7d15e71d86e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e5ac009f08bb3419ca3162f6ded152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_41
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bd2dd51999e3146879d537d0a9649b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_42
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2552561eba42cb64ab6dcc3c7f1682d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_43
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a75965a2c963a34aa8856c1850e0541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_44
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f69315b8b431064695a97d50b7722cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_45
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758857babf466304fbfbc1f9ce82bbff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_46
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6ce3f703880094888421db5e96fc32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_47
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 384
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3689b6e70914c6d4e8d8f26fffefdf88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b249affad49dcb84c8b6ad6dd28608e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_49
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef509e3b3b1451540b62602dc1740656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb300a370fd9074490807bdd4ccb390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_51
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd8680bf0c77b14d9511ecb5059c6fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8454a60e1d420744b9ce899acadc6513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_53
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37560d5b17878774cb9e213ea920d5c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_54
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e6b8b1c49c43849a155e2c12c8c6fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_55
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aea13ba770eac648927e34ba4d1c4a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_56
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9520f9bd809605848981b367fa7ef097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_57
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9914414ba3358348975ea403877d980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_58
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93038c1a226763a4c941608b8760434d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_59
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 288
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf376fc36baad34dae5a25a221d4a26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6440badc7506b754da4ca44ff3d3c4ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_61
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a654b6283323404f946d8ee1530d70c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbf94e47ba7cf44c8b32147da2da157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_63
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b87622d24156c744bcba2219300b116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_64
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557e617b70164ba40a3ad36597fd2606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_65
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80ec8bbe76761b4c80ae9c54d223f64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_66
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ced8e6623cd54742bd499cf62e0d24c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_67
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed3e6c8cbcd51e4f8b1192667ad132b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_68
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010ffacb67d914c409404e352716cd11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_69
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aff251f54e90304190941c425424f07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_70
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ff9440e61ff404d8911d54093ca1f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_71
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 192
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff02ecb64cdfd14d95b2bd1477f7a23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16dd55dde2f3e841a46741b0d997a61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8c62a2e25c07e46b628d11bb3219d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e69b8ab43eaf2f46a73426a74e7e62f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f396694f15a4c841a4f0b0d01627813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_76
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b9cd07072977848974a099ebb75945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_77
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930803e6139993644a82332b86530c57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_78
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eeabb94ef88e1946ace3d36b2a12c29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_79
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e747556394b92c4ea2a9b51e8c551b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_80
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166c1d8e65b4161469a61385245960f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_81
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e560097c56425544a7ee39fc202b889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_82
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2e439befff5ac41a632187a34feb56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_83
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 96
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e093de935901d24f98659950ed19c20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf4fda39568ff24ba918f9fceeb78bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_85
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ebe512f3ebcde4dbc3e6ce7a069f94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_86
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13724ba8441771e49a62b91118e5cb6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_87
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96f21db05f4e054eae3fb82d87ddbcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_88
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e192bd70b4ce8e244a92ac335f40df38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_89
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c400e0a9c9515a14991e94b4b5aa0eaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_90
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3deae822181b9643b09acc34d4bb633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_91
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1be2a643d18d5a4993b62b874345d68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_92
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a47ea9c3dee70340a8b7b5e8ad1524e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_93
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf170cf39c53244ca0b976386715543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_94
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296205729490c184db028064d06b6438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_door_95
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f7855540db1ec45941ebf654cc6f61
       vertices: []
       indices: 
       edges: []
