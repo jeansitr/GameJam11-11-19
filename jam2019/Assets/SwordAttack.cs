@@ -10,18 +10,14 @@ public class SwordAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        // Is this a shot?
-        EnemyScript enemy = otherCollider.gameObject.GetComponent<EnemyScript>();
-        if (enemy != null)
+        HealthScript hp = otherCollider.gameObject.GetComponent<HealthScript>();
+        if (hp != null)
         {
-            Instantiate(damageBurst, transform.position, transform.rotation);
-            Destroy(enemy.gameObject);
+            // Avoid friendly fire
+            if (hp.isEnemy)
+            {
+                hp.Damage(damage);
+            }
         }
-    }
-
-    void OnTriggerEnter(Collider col)
-    {
-        Debug.Log(col);
-        Instantiate(damageBurst, transform.position, transform.rotation);
     }
 }

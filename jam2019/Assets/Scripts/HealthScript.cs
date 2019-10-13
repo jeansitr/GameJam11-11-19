@@ -11,11 +11,14 @@ public class HealthScript : MonoBehaviour
     /// Total hitpoints
     /// </summary>
     public int hp = 1;
+    public int touchDamage = 1;
 
     /// <summary>
     /// Enemy or player?
     /// </summary>
     public bool isEnemy = true;
+
+    public GameObject particleEffect = null;
 
     /// <summary>
     /// Inflicts damage and check if the object should be destroyed
@@ -24,11 +27,15 @@ public class HealthScript : MonoBehaviour
     public void Damage(int damageCount)
     {
         hp -= damageCount;
-
+        if (particleEffect != null)
+        {
+            Instantiate(particleEffect, transform.position, transform.rotation);
+        }
         if (hp <= 0)
         {
             // Dead!
             Destroy(gameObject);
+            
         }
     }
 
@@ -45,6 +52,23 @@ public class HealthScript : MonoBehaviour
 
                 // Destroy the shot
                 Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        HealthScript hp = collision.gameObject.GetComponent<HealthScript>();
+        if (hp != null)
+        {
+            // Avoid friendly fire
+            if (hp.isEnemy)
+            {
+                // Avoid friendly fire
+                if (isEnemy != hp.isEnemy)
+                {
+                    Damage(hp.touchDamage);
+                }
             }
         }
     }

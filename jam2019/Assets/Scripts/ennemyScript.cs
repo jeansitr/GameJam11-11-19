@@ -6,6 +6,8 @@ public class ennemyScript : MonoBehaviour
 {
     private WeaponProjectile[] weapons;
 
+    bool canAttack = false;
+
     void Awake()
     {
         // Retrieve the weapon only once
@@ -14,13 +16,21 @@ public class ennemyScript : MonoBehaviour
 
     void Update()
     {
-        foreach (WeaponProjectile weapon in weapons)
+        if (canAttack)
         {
-            // Auto-fire
-            if (weapon != null && weapon.CanAttack)
+            foreach (WeaponProjectile weapon in weapons)
             {
-                weapon.Attack(true);
+                // Auto-fire
+                if (weapon != null && weapon.CanAttack)
+                {
+                    weapon.Attack(true);
+                }
             }
         }
+    }
+
+    public void StartAttacking()
+    {
+        canAttack = true;
     }
 }
