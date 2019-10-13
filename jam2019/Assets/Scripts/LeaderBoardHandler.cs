@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts;
-using UnityEditor.SceneManagement;
 using SQLite4Unity3d;
 using TMPro;
 
@@ -38,7 +37,7 @@ public class LeaderBoardHandler : MonoBehaviour
                 if (activeLettre == lettres.Length)
                 {
                     SaveScore();
-                    EditorSceneManager.LoadScene(0);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                 }
             }
 
