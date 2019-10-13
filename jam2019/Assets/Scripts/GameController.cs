@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class GameController : MonoBehaviour
 {
     public UIController UI;
@@ -26,11 +28,19 @@ public class GameController : MonoBehaviour
     bool portalSpawned = false;
     int nbrFollower = 0;
 
+    AudioSource audioMort;
+    public AudioClip mort;
+    AudioSource audioPoint;
+    public AudioClip point;
+
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this);
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        audioMort = GetComponent<AudioSource>();
+        audioPoint = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +52,7 @@ public class GameController : MonoBehaviour
         UI.updateHealth(playerHP);
         if (playerHP <= 0)
         {
+            audioMort.PlayOneShot(mort, 0.7F);
             SceneManager.LoadScene(0);
         }
 
@@ -149,6 +160,7 @@ public class GameController : MonoBehaviour
 
     public void gainPoints(int scoreToAdd)
     {
+        audioPoint = GetComponent<AudioSource>();
         score += scoreToAdd;
     }
 
