@@ -7,9 +7,9 @@ public class Civil : MonoBehaviour
 
     public float speed;
 
-    private Transform target;
+    public Transform target;
     private Transform targetFeet;
-    private Transform myFeet;
+    public Transform myFeet;
 
     // Start is called before the first frame update
     void Start()
