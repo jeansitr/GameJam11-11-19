@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class Civil : MonoBehaviour
 {
 
@@ -12,11 +14,15 @@ public class Civil : MonoBehaviour
     private Animator anim;
     private int followDistance = 2;
 
+    AudioSource audioSuivre;
+    public AudioClip suivre;
+
     // Start is called before the first frame update
     void Start()
     {
         myFeet = transform.Find("Feet");
         anim = GetComponent<Animator>();
+        audioSuivre = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -65,6 +71,7 @@ public class Civil : MonoBehaviour
 
     public void Follow(Transform newTarget)
     {
+        audioSuivre.PlayOneShot(suivre, 0.7F);
         target = newTarget;
         targetFeet = target.Find("Feet");
         GetComponent<Collider2D>().enabled = false;
