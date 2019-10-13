@@ -115,6 +115,7 @@ MonoBehaviour:
   anim: {fileID: 4485336817700804026}
   sword: {fileID: 4485336817989861376}
   joySens: 0.7
+  followingCivil: 0
   timeBetweenAttack: 1
 --- !u!50 &4485336816655450638
 Rigidbody2D:
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce2a53aebf8c724283f78c7ddc87b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 6
   scoreToGive: 10
   touchDamage: 0
   countHealth: {fileID: 0}
