@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class GameController : MonoBehaviour
 {
     public UIController UI;
@@ -26,28 +28,41 @@ public class GameController : MonoBehaviour
     bool portalSpawned = false;
     int nbrFollower = 0;
 
+    AudioSource audioMort;
+    public AudioClip mort;
+    AudioSource audioPoint;
+    public AudioClip point;
+
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this);
         SceneManager.sceneLoaded += OnSceneLoaded;
+
+        audioMort = GetComponent<AudioSource>();
+        audioPoint = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UI.updateScore(score);
-
-        int playerHP = playerHealth.hp;
-        UI.updateHealth(playerHP);
-        if (playerHP <= 0)
+        if(playerHealth.hp > 0)
         {
-            SceneManager.LoadScene(0);
-        }
+            UI.updateScore(score);
 
-        if (killCount >= enemyToKill)
-        {
-            SpawnPortal();
+            int playerHP = playerHealth.hp;
+            Debug.Log("HP :" + playerHealth.hp);
+            UI.updateHealth(playerHP);
+            if (playerHP <= 0)
+            {
+                audioMort.PlayOneShot(mort, 0.7F);
+                SceneManager.LoadScene(6);
+            }
+
+            if (killCount >= enemyToKill)
+            {
+                SpawnPortal();
+            }
         }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -149,6 +164,7 @@ public class GameController : MonoBehaviour
 
     public void gainPoints(int scoreToAdd)
     {
+        audioPoint = GetComponent<AudioSource>();
         score += scoreToAdd;
     }
 

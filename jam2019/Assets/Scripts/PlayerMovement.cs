@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             //moving = true;
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton1) /* && hasAttacked == false*/)
+        if (Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.JoystickButton0) /* && hasAttacked == false*/)
         {
             attacking = true;
             hasAttacked = true;
