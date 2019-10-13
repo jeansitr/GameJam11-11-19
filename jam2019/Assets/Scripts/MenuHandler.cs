@@ -12,6 +12,6 @@ public class MenuHandler : MonoBehaviour
 
     public void StartGame()
     {
-        EditorSceneManager.LoadScene(0);
+        EditorSceneManager.LoadScene(1);
     }
 }

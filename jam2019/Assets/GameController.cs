@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     float currentLvl;
     public GameObject[] mobsListDrought = new GameObject[2];
     public GameObject[] mobsListIce = new GameObject[2];
-    public GameObject[] mmobsListLavat = new GameObject[2];
+    public GameObject[] mobsListLava = new GameObject[2];
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,13 @@ public class GameController : MonoBehaviour
     void Update()
     {
         UI.updateScore(score);
-        UI.updateHealth(playerHealth.hp);
+
+        int playerHP = playerHealth.hp;
+        UI.updateHealth(playerHP);
+        if (playerHP <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -43,7 +49,28 @@ public class GameController : MonoBehaviour
                 {
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
+                    Debug.Log("ALLO: " + EnemyOnDrought);
                     for (int i = 0; i < EnemyOnDrought; i++)
+                    {
+                        Debug.Log("SALUT");
+                        GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
+                        if (!spawnChosen.Contains(spawn))
+                        {
+                            spawnChosen.Add(spawn);
+                        }
+                    }
+                    foreach (GameObject spawnpoint in spawnChosen)
+                    {
+                        Debug.Log("SPAWNING MOB");
+                        Instantiate(mobsListDrought[Random.Range(0,mobsListDrought.Length)], spawnpoint.transform, false);
+                    }
+                    break;
+                }
+            case "ice":
+                {
+                    GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
+                    List<GameObject> spawnChosen = new List<GameObject>();
+                    for (int i = 0; i < EnemyOnIce; i++)
                     {
                         GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
                         Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
@@ -54,18 +81,27 @@ public class GameController : MonoBehaviour
                     }
                     foreach (GameObject spawnpoint in spawnChosen)
                     {
-                        Instantiate(mobsListDrought[Random.Range(0,mobsListDrought.Length)], spawnpoint.transform, false);
+                        Instantiate(mobsListIce[Random.Range(0, mobsListIce.Length)], spawnpoint.transform, false);
                     }
-                    break;
-                }
-            case "ice":
-                {
-
                     break;
                 }
             case "lava":
                 {
-
+                    GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
+                    List<GameObject> spawnChosen = new List<GameObject>();
+                    for (int i = 0; i < EnemyOnLava; i++)
+                    {
+                        GameObject spawn = spawnLists[Random.Range(0, spawnLists.Length)];
+                        Debug.Log("Spawn chosen =" + Random.Range(0, spawnLists.Length));
+                        if (!spawnChosen.Contains(spawn))
+                        {
+                            spawnChosen.Add(spawn);
+                        }
+                    }
+                    foreach (GameObject spawnpoint in spawnChosen)
+                    {
+                        Instantiate(mobsListLava[Random.Range(0, mobsListLava.Length)], spawnpoint.transform, false);
+                    }
                     break;
                 }
         }

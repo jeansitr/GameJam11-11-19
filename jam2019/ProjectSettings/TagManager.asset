@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Civil
   - EnemySpawn
+  - HUD
+  - Camera
   layers:
   - Default
   - TransparentFX
