@@ -6,11 +6,11 @@ public class Civil : MonoBehaviour
 {
 
     public float speed;
-
     public Transform target;
     private Transform targetFeet;
     private Transform myFeet;
     private Animator anim;
+    private int followDistance = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +24,9 @@ public class Civil : MonoBehaviour
     {
         if (target != null)
         {
-            if(Vector2.Distance(myFeet.position, targetFeet.position) > 2)
+            if(Vector2.Distance(myFeet.position, targetFeet.position) > followDistance)
             {
+                anim.SetBool("moving", true);
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetFeet.position.x, target.position.y), speed * Time.deltaTime);
                 float adjacent = transform.position.x - target.transform.position.x;
                 float oppose = target.transform.position.y - transform.position.y;
@@ -55,13 +56,20 @@ public class Civil : MonoBehaviour
                     anim.SetFloat("moveY", -1);
                 }
             }
+            else
+            {
+                anim.SetBool("moving", false);
+            }
         }
     }
 
     public void Follow(Transform newTarget)
     {
-        target = GameObject.Find("PlayerController").GetComponent<Transform>();
+        target = newTarget;
         targetFeet = target.Find("Feet");
         GetComponent<Collider2D>().enabled = false;
+        PlayerMovement player = target.GetComponent<PlayerMovement>();
+        player.followingCivil++;
+        followDistance = 2 * player.followingCivil;
     }
 }
