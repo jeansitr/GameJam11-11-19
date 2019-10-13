@@ -13,6 +13,9 @@ public class HealthScript : MonoBehaviour
     AudioSource audioTakeDamage;
     public AudioClip takeDamage;
 
+    AudioSource audioMort;
+    public AudioClip mort;
+
     /// <summary>
     /// Total hitpoints
     /// </summary>
@@ -32,6 +35,7 @@ public class HealthScript : MonoBehaviour
     public void Start()
     {
         audioTakeDamage = GetComponent<AudioSource>();
+        audioMort = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -49,6 +53,8 @@ public class HealthScript : MonoBehaviour
         }
         if (hp <= 0)
         {
+            audioMort.PlayOneShot(mort, 0.7F);
+
             // Dead!
             Destroy(gameObject);
             
