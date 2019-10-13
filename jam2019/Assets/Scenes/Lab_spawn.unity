@@ -12604,6 +12604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1322330448}
   playerHealth: {fileID: 1734708995}
+  score: 0
   EnemyOnDrought: 38
   EnemyOnIce: 12
   EnemyOnLava: 28

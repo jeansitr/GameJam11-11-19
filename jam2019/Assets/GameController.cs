@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public UIController UI;
+    public GameObject Portal;
+    public int enemyToKill;
+    public int killCount = 0;
     public HealthScript playerHealth;
     public int score;
     public int EnemyOnDrought = 1;
@@ -35,6 +38,11 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        if (killCount >= 5)
+        {
+            SpawnPortal();
+        }
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -47,7 +55,7 @@ public class GameController : MonoBehaviour
                 }
             case "Drought":
                 {
-                    Debug.Log("BUG ?");
+                    killCount = 0;
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnDrought; i++)
@@ -66,6 +74,7 @@ public class GameController : MonoBehaviour
                 }
             case "ice":
                 {
+                    killCount = 0;
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnIce; i++)
@@ -84,6 +93,7 @@ public class GameController : MonoBehaviour
                 }
             case "lava":
                 {
+                    killCount = 0;
                     GameObject[] spawnLists = GameObject.FindGameObjectsWithTag("EnemySpawn");
                     List<GameObject> spawnChosen = new List<GameObject>();
                     for (int i = 0; i < EnemyOnLava; i++)
@@ -111,5 +121,9 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void SpawnPortal()
+    {
+        
     }
 }
