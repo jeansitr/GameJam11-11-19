@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour
         UI.updateScore(score);
 
         int playerHP = playerHealth.hp;
+        Debug.Log("HP :" + playerHealth.hp);
         UI.updateHealth(playerHP);
         if (playerHP <= 0)
         {

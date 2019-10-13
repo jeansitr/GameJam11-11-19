@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 
@@ -44,7 +45,7 @@ public class HealthScript : MonoBehaviour
     {
         Debug.Log("receiving damage");
         hp -= damageCount;
-        audioTakeDamage.PlayOneShot(takeDamage, 0.7F);
+        //audioTakeDamage.PlayOneShot(takeDamage, 0.7F);
 
         if (particleEffect != null)
         {
@@ -53,11 +54,16 @@ public class HealthScript : MonoBehaviour
         if (hp <= 0)
         {
             // Dead!
-            Destroy(gameObject);
+            
             if (isEnemy)
             {
+                Destroy(gameObject);
                 FindObjectOfType<GameController>().gainPoints(scoreToGive);
                 FindObjectOfType<GameController>().killCount += 1;
+            }
+            else
+            {
+                SceneManager.LoadScene("End");
             }
         }
     }

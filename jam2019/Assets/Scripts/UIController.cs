@@ -26,7 +26,7 @@ public class UIController : MonoBehaviour
 
     public void updateHealth(int health)
     {
-        healthText.text = "Health: " + health;
+        healthText.text = "x " + health;
         Debug.Log("Updated health : " + health);
     }
 }

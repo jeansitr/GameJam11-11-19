@@ -22,8 +22,8 @@ public class LeaderBoardHandler : MonoBehaviour
     private void OnEnable()
     {
         ShowScore();
-        GC = GameObject.FindObjectOfType<GameController>();
-        ScoreText.text = GC.score.ToString();
+        //GC = GameObject.FindObjectOfType<GameController>();
+        //ScoreText.text = GC.score.ToString();
     }
 
     private void Update()
@@ -37,7 +37,7 @@ public class LeaderBoardHandler : MonoBehaviour
                 if (activeLettre == lettres.Length)
                 {
                     SaveScore();
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                    //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                 }
             }
 
