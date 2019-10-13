@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1744933893158468079}
   - component: {fileID: 486047036761623699}
   - component: {fileID: 5213690297597282262}
+  - component: {fileID: 1380351272247253418}
   m_Layer: 0
-  m_Name: Civil
+  m_Name: civil
   m_TagString: Civil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2444243890708398457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.94, y: -0.17, z: 14.620976}
-  m_LocalScale: {x: 5, y: 15, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4369826426590256334}
   m_Father: {fileID: 0}
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300032, guid: f8981ad46b27e5640b08be32efd6b00a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +98,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0673}
   serializedVersion: 2
   m_Radius: 0.03328053
+--- !u!114 &1380351272247253418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444243890708398457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509258ebca7bab04382e30c752f36d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  target: {fileID: 0}
+  myFeet: {fileID: 0}
 --- !u!1 &4442871601425164636
 GameObject:
   m_ObjectHideFlags: 0
