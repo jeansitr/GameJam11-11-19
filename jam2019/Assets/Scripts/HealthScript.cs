@@ -50,6 +50,7 @@ public class HealthScript : MonoBehaviour
             if (isEnemy)
             {
                 FindObjectOfType<GameController>().gainPoints(scoreToGive);
+                FindObjectOfType<GameController>().killCount += 1;
             }
         }
     }
