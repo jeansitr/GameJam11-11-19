@@ -12606,7 +12606,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1734708995}
   EnemyOnDrought: 38
   EnemyOnIce: 12
-  EnemyOnLava: 4
+  EnemyOnLava: 28
   mobsListDrought:
   - {fileID: 4287138745763406290, guid: 93eb4f05afd71dd4c9d0906695ab9735, type: 3}
   - {fileID: 3289593560274410838, guid: b1770462cad4ec040b66683c443afb8f, type: 3}
