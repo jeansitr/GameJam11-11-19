@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 public class Doorhandler : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class Doorhandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EditorSceneManager.LoadScene(sceneToLoad);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
     }
 
     
