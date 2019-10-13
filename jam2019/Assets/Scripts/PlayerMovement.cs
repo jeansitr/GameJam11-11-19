@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject sword;
 
     public float joySens = 0.7f;
+    public int followingCivil = 0;
 
     float moveX = 0;
     float moveY = 0;
@@ -106,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             //moving = true;
         }
 
-        if (Input.GetKey(KeyCode.JoystickButton1)/* && hasAttacked == false*/)
+        if (Input.GetKey(KeyCode.JoystickButton1) /* && hasAttacked == false*/)
         {
             attacking = true;
             hasAttacked = true;
