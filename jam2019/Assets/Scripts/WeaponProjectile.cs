@@ -17,6 +17,8 @@ public class WeaponProjectile : MonoBehaviour
     /// </summary>
     public Transform shotPrefab;
 
+    public Transform angleLookingAt;
+
     /// <summary>
     /// Cooldown in seconds between two shots
     /// </summary>
@@ -54,11 +56,13 @@ public class WeaponProjectile : MonoBehaviour
         {
             shootCooldown = shootingRate;
 
-            // Create a new shot
-            var shotTransform = Instantiate(shotPrefab) as Transform;
+            /* // Create a new shot
+             var shotTransform = Instantiate(shotPrefab) as Transform;
 
-            // Assign position
-            shotTransform.position = transform.position;
+             // Assign position
+             shotTransform.position = transform.position;*/
+            
+            Transform shotTransform = Instantiate(shotPrefab, transform.position + 1.0f * angleLookingAt.forward, new Quaternion(angleLookingAt.eulerAngles.x, 0, angleLookingAt.eulerAngles.z, 0));
 
             // The is enemy property
             ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
@@ -71,7 +75,7 @@ public class WeaponProjectile : MonoBehaviour
             MoveScriptTest move = shotTransform.gameObject.GetComponent<MoveScriptTest>();
             if (move != null)
             {
-                move.direction = this.transform.right; // towards in 2D space is the right of the sprite
+                move.direction = angleLookingAt.forward; // towards in 2D space is the right of the sprite
             }
         }
     }

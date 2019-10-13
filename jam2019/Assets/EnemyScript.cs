@@ -40,6 +40,7 @@ public class EnemyScript : MonoBehaviour
         timeBetweenMove = timeBetweenMoveOriginal;
         timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
         timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
+        anim.SetBool("moving", true);
     }
 
     // Update is called once per frame
@@ -92,6 +93,34 @@ public class EnemyScript : MonoBehaviour
         {
             detecterJoueur = true;
             Debug.Log("Joueur Détecté");
+        }
+
+        float adjacent = transform.position.x - player.transform.position.x;
+        float oppose = player.transform.position.y - transform.position.y;
+
+        float angle = Mathf.Atan2(oppose, adjacent);
+        angle = ((angle * 180) / Mathf.PI);
+
+
+        if (angle > -45f && angle <= 45f)
+        {
+            anim.SetFloat("moveX", -1);
+            anim.SetFloat("moveY", 0);
+        }
+        else if (angle > 45f && angle <= 135f)
+        {
+            anim.SetFloat("moveX", 0);
+            anim.SetFloat("moveY", 1);
+        }
+        else if (angle > 135f || angle <= -135f)
+        {
+            anim.SetFloat("moveX", 1);
+            anim.SetFloat("moveY", 0);
+        }
+        else
+        {
+            anim.SetFloat("moveX", 0);
+            anim.SetFloat("moveY", -1);
         }
     }
 

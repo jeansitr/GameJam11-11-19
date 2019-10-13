@@ -14,6 +14,8 @@ public class ShotScript : MonoBehaviour
     /// </summary>
     public int damage = 1;
 
+    public int timeToDespawn = 3;
+
     /// <summary>
     /// Projectile damage player or enemies?
     /// </summary>
@@ -22,6 +24,6 @@ public class ShotScript : MonoBehaviour
     void Start()
     {
         // 2 - Limited time to live to avoid any leak
-        Destroy(gameObject, 3); 
+        Destroy(gameObject, timeToDespawn); 
     }
 }
