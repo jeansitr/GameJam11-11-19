@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 737a6c3baa9c08e438ca8be3060271cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   touchDamage: 1
+  countHealth: {fileID: 0}
   isEnemy: 1
   particleEffect: {fileID: 1348009746138368, guid: ab4122136b992134f9e19f40462d9691,
     type: 3}
