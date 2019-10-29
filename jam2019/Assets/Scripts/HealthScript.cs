@@ -32,6 +32,9 @@ public class HealthScript : MonoBehaviour
 
     public GameObject particleEffect = null;
 
+    public SpriteRenderer playerSprite;
+    private bool isInvulnerable;
+
     public void Start()
     {
         audioTakeDamage = GetComponent<AudioSource>();
@@ -70,6 +73,9 @@ public class HealthScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
+        if (isInvulnerable)
+            return;
+
         // Is this a shot?
         ShotScript shot = otherCollider.gameObject.GetComponent<ShotScript>();
         if (shot != null)
@@ -79,6 +85,8 @@ public class HealthScript : MonoBehaviour
             {
                 Damage(shot.damage);
 
+                StartCoroutine(ReceiveDamage());
+
                 // Destroy the shot
                 Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
             }
@@ -87,6 +95,9 @@ public class HealthScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isInvulnerable)
+            return;
+
         HealthScript hp = collision.gameObject.GetComponent<HealthScript>();
         if (hp != null)
         {
@@ -97,8 +108,24 @@ public class HealthScript : MonoBehaviour
                 if (isEnemy != hp.isEnemy)
                 {
                     Damage(hp.touchDamage);
+
+                    StartCoroutine(ReceiveDamage());
                 }
             }
         }
     }
+
+    IEnumerator ReceiveDamage()
+    {
+        isInvulnerable = true;
+        for (int i = 0; i < 4; i++)
+        {
+            playerSprite.enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            playerSprite.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+        }
+        isInvulnerable = false;
+    }
+
 }

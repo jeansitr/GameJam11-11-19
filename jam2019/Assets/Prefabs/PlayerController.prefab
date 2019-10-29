@@ -112,6 +112,7 @@ MonoBehaviour:
   isEnemy: 0
   particleEffect: {fileID: 1348009746138368, guid: ab4122136b992134f9e19f40462d9691,
     type: 3}
+  playerSprite: {fileID: 1899225731910271736}
 --- !u!1 &5260281943312234064
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +203,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -475,6 +477,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

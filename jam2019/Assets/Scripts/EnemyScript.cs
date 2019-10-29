@@ -100,6 +100,10 @@ public class EnemyScript : MonoBehaviour
         {
             detecterJoueur = true;
         }
+        if (Vector2.Distance(transform.position, player.gameObject.transform.position) >= MaxDist)
+        {
+            detecterJoueur = false;
+        }
 
         float adjacent = transform.position.x - player.transform.position.x;
         float oppose = player.transform.position.y - transform.position.y;
